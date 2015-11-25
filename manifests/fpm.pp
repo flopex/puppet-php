@@ -13,7 +13,7 @@ class php::fpm (
   $package  = "${::php::package_prefix}${::php::params::fpm_package_suffix}",
   $inifile  = $::php::params::fpm_inifile,
   $settings = {},
-  $pools    = { 'www' => {} },
+  $pools    = {},
 ) inherits ::php::params {
 
   if $caller_module_name != $module_name {
